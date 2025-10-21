@@ -6,53 +6,120 @@ body {
     padding: 0;
     color: #333;
     background-image: url('images/background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
-/* Header styling */
-h1 {
-    font-size: 36px;
-    margin: 0;
-}
-
-/* Content styling */
+/* Main content container */
 .content {
     padding: 20px;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Biography section styling */
-.biography {
-    background-color: #ffffff;
+/* Shared section styling */
+section {
+    margin-bottom: 40px;
     padding: 20px;
-    border-radius: 5px;
+    background-color: #ffffff;
+    border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Biography section */
+.biography img {
+    border-radius: 50%;
+    height: 250px;
+    width: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.biography p {
+    text-align: center;
 }
 
 .biography h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    text-align: center;
 }
 
-/* Achievements section styling */
-.achievements {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/* Techstack section */
+.teckstack h2 {
+    text-align: center;
 }
 
-.achievements h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.achievements ul {
+.teckstack ul {
     list-style-type: disc;
     padding-left: 20px;
 }
 
-.achievements li {
+.techstack h2 {
+    text-align: center;
+}
+
+.techstack p {
+    text-align: center;
+}
+
+.horizontal-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Projects section */
+.projects ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.projects li {
     margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Contact section */
+.contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive image fallback */
+@media (max-width: 600px) {
+    .biography img {
+        height: 180px;
+    }
 }
