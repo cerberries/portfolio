@@ -45,33 +45,17 @@ p {
 .biography img {
     border-radius: 50%;
     height: 250px;
-    width: auto;
     display: block;
     margin: 0 auto 20px;
 }
 
+.biography h2,
 .biography p {
     text-align: center;
 }
 
-.biography h2 {
-    text-align: center;
-}
-
 /* Techstack section */
-.teckstack h2 {
-    text-align: center;
-}
-
-.teckstack ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.techstack h2 {
-    text-align: center;
-}
-
+.techstack h2,
 .techstack p {
     text-align: center;
 }
@@ -88,38 +72,101 @@ p {
 
 /* Projects section */
 .projects ul {
-    list-style-type: square;
-    padding-left: 20px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .projects li {
-    margin-bottom: 10px;
-    font-weight: 500;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projects li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.projects strong {
+    font-size: 18px;
+}
+
+.projects a {
+    color: #0077cc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.projects a:hover {
+    color: #005fa3;
+    text-decoration: underline;
+}
+
+.projects li::before {
+    content: "💻";
+    margin-right: 10px;
+    font-size: 18px;
 }
 
 /* Contact section */
+.contact {
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+}
+
+.contact h2 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
 .contact ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
 .contact li {
-    margin-bottom: 10px;
     font-size: 16px;
+    color: #333;
 }
 
 .contact a {
     color: #0077cc;
     text-decoration: none;
+    font-weight: bold;
 }
 
-.contact a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive image fallback */
+/* Mobile view */
 @media (max-width: 600px) {
     .biography img {
         height: 180px;
+    }
+
+    .projects li {
+        padding: 15px;
+    }
+
+    .projects strong {
+        font-size: 16px;
     }
 }
